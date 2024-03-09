@@ -21,25 +21,26 @@ const formatWord = (word: Word) => {
 };
 
 export const App = () => {
-  window.document.title = "Ударения ЕГЭ";
   const [words, setWords] = useState<Word[]>(shuffle(wordList));
   const [word, setWord] = useState<string>(formatWord(words[0]));
   const [text, setText] = useState<string>("");
-
+  const wipeText = () => setTimeout(() => setText(""), 1500);
+  let t: NodeJS.Timeout;
   const onClick = (isRight: boolean) => {
-    console.log(word, words.slice(0, 5));
+    clearTimeout(t);
     if (isRight) {
       setText("Правильно!");
       // delay(3000).then(()=> setText(""))
       // console.log(typeof words);
       // console.log(words.slice(1) + words.slice(0, 1));
       setWords(words.slice(1).concat(words.slice(0, 1)));
+      t = wipeText();
     } else {
       setText(`Нет, правильно "${words[0].right}"`);
       // delay(3000).then(()=> setText(""))
       // console.log(typeof words);
       setWords(words.slice(1, 5).concat(words.slice(0, 1)).concat(words.slice(5)));
-
+      t = wipeText();
     }
     setWord(formatWord(words.at(1) as Word));
   };
@@ -49,13 +50,13 @@ export const App = () => {
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <div className="flex flex-col items-center justify-between h-[100svh]">
         <div className="flex items-center justify-center h-[70svh] w-screen">
-          <h1 className="scroll-m-20 w-screen text-5xl font-semibold tracking-tight text-center">
+          <h1 className="scroll-m-20 w-screen text-4xl font-semibold tracking-tight text-center">
             {word}
           </h1>
         </div>
         <div className="h-[30svh] flex flex-col items-center">
           <div className="h-8 p-5 flex items-center justify-center w-[100vw]">
-            <p className="text-lg font-semibold text-muted-foreground text-center">
+            <p className="text-lg font-semibold text-muted-foreground text-center ">
               {text}
             </p>
           </div>
