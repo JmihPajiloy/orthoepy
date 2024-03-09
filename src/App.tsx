@@ -48,25 +48,25 @@ export const App = () => {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <div className="flex flex-col items-center justify-between h-screen">
-        <div className="flex items-center justify-center h-[70vh] w-screen">
+        <div className="flex items-center justify-center h-[70svh] w-screen">
           <h1 className="scroll-m-20 w-screen text-5xl font-semibold tracking-tight text-center">
             {word}
           </h1>
         </div>
-        <div className="h-[30vh] flex flex-col items-center">
+        <div className="h-[30svh] flex flex-col items-center">
           <div className="h-8 p-5 flex items-center justify-center w-[100vw]">
             <p className="text-lg font-semibold text-muted-foreground text-center">
               {text}
             </p>
           </div>
           <div className="flex flex-row items-end justify-center w-screen h-full gap-2">
-            <Button variant="outline" className="w-full h-[10vh] ml-2 mb-2"
+            <Button variant="outline" className="w-full h-[10svh] ml-2 mb-2"
                     onClick={() => onClick(word === words[0].right)}>
-              <CheckIcon className="h-[5vh] w-[5vh]" />
+              <CheckIcon className="h-[5svh] w-[5svh]" />
             </Button>
-            <Button variant="outline" className="w-full h-[10vh] mr-2 mb-2"
+            <Button variant="outline" className="w-full h-[10svh] mr-2 mb-2"
                     onClick={() => onClick(word !== words[0].right)}>
-              <XIcon className="h-[5vh] w-[5vh]" />
+              <XIcon className="h-[5svh] w-[5svh]" />
             </Button>
           </div>
         </div>
