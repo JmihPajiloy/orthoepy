@@ -47,7 +47,7 @@ export const App = () => {
   // setWord(queue.at(0))
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="flex flex-col items-center justify-between h-screen">
+      <div className="flex flex-col items-center justify-between h-[100svh]">
         <div className="flex items-center justify-center h-[70svh] w-screen">
           <h1 className="scroll-m-20 w-screen text-5xl font-semibold tracking-tight text-center">
             {word}
