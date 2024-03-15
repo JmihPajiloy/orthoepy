@@ -1,3 +1,6 @@
 .screen-wide {
     width: min(500px, 100vw);
 }
+::-webkit-scrollbar {
+    display: none;
+}
