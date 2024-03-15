@@ -33,11 +33,11 @@ export const App = () => {
         <div className="h-30 flex flex-col items-center">
           <ExplanationText text={text} />
           <div className="flex flex-row items-end justify-center screen-wide h-full gap-2">
-            <Button variant="outline" className="w-full h-10 ml-2 mb-2 mt-2"
+            <Button variant="outline" className="w-full h-10 ml-2 mb-2 mt-2 mobile"
                     onClick={() => onClick(current === right)}>
               <CheckIcon className="h-5 w-5" />
             </Button>
-            <Button variant="outline" className="w-full h-10 mr-2 mb-2 mt-2"
+            <Button variant="outline" className="w-full h-10 mr-2 mb-2 mt-2 mobile"
                     onClick={() => onClick(current !== right)}>
               <CrossIcon className="h-5 w-5" />
             </Button>
