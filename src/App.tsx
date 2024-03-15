@@ -6,11 +6,12 @@ import { CheckIcon } from "@/components/icons/check-icon.tsx";
 import { Header } from "@/components/header/header.tsx";
 import { CrossIcon } from "@/components/icons/cross-icon.tsx";
 import { useWords } from "@/providers";
-import { ExplanationText } from "@/components/text/explanation-text.tsx";
+import { ExplanationText } from "@/components/explanation-text";
+import { Mistakes } from "@/components/mistakes/mistakes.tsx";
 
 export const App = () => {
   const [text, setText] = useState<string>("");
-  const { streak, right, wrongs, current, retry, next } = useWords();
+  const { streak, right, current, retry, next } = useWords();
   const onClick = (isRight: boolean) => {
     if (isRight) {
       setText(`Правильно! ${streak === 0 ? "" : `(x${streak + 1})`}`);
@@ -43,14 +44,7 @@ export const App = () => {
           </div>
         </div>
       </div>
-      <div>
-        {
-          Array
-            .from(wrongs.values())
-            .map(v => v.right)
-            .map(v => <div>{v}</div>)
-        }
-      </div>
+      <Mistakes />
     </>
   );
 };

@@ -1,6 +1,12 @@
 .screen-wide {
     width: min(500px, 100vw);
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
+
+/*.mobile:hover, .mobile:active {*/
+/*    background-color: hsl(var(--accent));*/
+/*    color: hsl(var(--accent-foreground));*/
+/*}*/
