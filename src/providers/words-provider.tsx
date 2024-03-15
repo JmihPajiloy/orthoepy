@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { wordList } from "@/words.ts";
+import { shuffle } from "@/utils.ts";
 
 type Word = {
   right: string,
@@ -12,12 +13,28 @@ type WordsProviderProps = {
 
 type WordsProviderState = {
   queue: Array<Word>
+  current: string
+  right: string
+  wrongs: Set<Word>
+  streak: number
   next: () => void
   retry: () => void
 }
 
+export const formatWord = (word: Word) => {
+  const words = [...word.wrong];
+  words.push(word.right);
+  return words.at(
+    Math.floor(Math.random() * words.length)
+  ) as string;
+};
+
 const initialState: WordsProviderState = {
   queue: wordList,
+  current: "",
+  right: "",
+  wrongs: new Set(),
+  streak: 0,
   next: () => null,
   retry: () => null
 };
@@ -29,35 +46,25 @@ export const WordsProvider = ({
                                 retryGap = 5,
                                 ...props
                               }: WordsProviderProps) => {
-  const [queue, setQueue] = useState<Array<Word>>(wordList);
+  const [queue, setQueue] = useState<Array<Word>>(shuffle(wordList));
   const [wrongWords, setWrongWords] = useState<Set<Word>>(new Set<Word>());
-  // useEffect(() => {
-  //   const root = window.document.documentElement
-  //
-  //   root.classList.remove("light", "dark")
-  //
-  //   if (theme === "system") {
-  //     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-  //       .matches
-  //       ? "dark"
-  //       : "light"
-  //
-  //     root.classList.add(systemTheme)
-  //     return
-  //   }
-  //
-  //   root.classList.add(theme)
-  // }, [theme])
+  const [streak, setStreak] = useState<number>(0);
 
   const value = {
     queue,
+    current: formatWord(queue[0]),
+    right: queue[0].right,
+    wrongs: wrongWords,
+    streak: streak,
     retry: () => {
+      setStreak(0);
       setQueue(queue.slice(1, retryGap).concat(queue.slice(0, 1)).concat(queue.slice(retryGap)));
       const newWrongWords = new Set(wrongWords);
       newWrongWords.add(queue[0]);
       setWrongWords(newWrongWords);
     },
     next: () => {
+      setStreak(streak + 1);
       setQueue(queue.slice(1).concat(queue.slice(0, 1)));
     }
   };
@@ -71,9 +78,7 @@ export const WordsProvider = ({
 
 export const useWords = () => {
   const context: WordsProviderState = useContext(WordsProviderContext);
-
   if (context === undefined)
-    throw new Error("useTheme must be used within a ThemeProvider");
-
+    throw new Error("useWords must be used within a WordsProvider");
   return context;
 };

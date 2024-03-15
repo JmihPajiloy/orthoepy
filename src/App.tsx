@@ -1,78 +1,55 @@
 import "@/global.css";
-import { ThemeProvider } from "@/providers";
+import "@/styles/styles.css";
 import { Button } from "@/components/ui/button.tsx";
-import { shuffle } from "@/utils.ts";
 import { useState } from "react";
 import { CheckIcon } from "@/components/icons/check-icon.tsx";
-import { wordList } from "@/words.ts";
-import { XIcon } from "@/components/icons/x-icon.tsx";
-
-type Word = {
-  right: string,
-  wrong: string[]
-}
-
-const formatWord = (word: Word) => {
-  const words = [...word.wrong];
-  words.push(word.right);
-  return words.at(
-    Math.floor(Math.random() * words.length)
-  ) as string;
-};
+import { Header } from "@/components/header/header.tsx";
+import { CrossIcon } from "@/components/icons/cross-icon.tsx";
+import { useWords } from "@/providers";
 
 export const App = () => {
-  const [words, setWords] = useState<Word[]>(shuffle(wordList));
-  const [word, setWord] = useState<string>(formatWord(words[0]));
   const [text, setText] = useState<string>("");
-  const wipeText = () => setTimeout(() => setText(""), 1500);
-  let t: NodeJS.Timeout;
+  const { streak, right, current, retry, next } = useWords();
   const onClick = (isRight: boolean) => {
-    clearTimeout(t);
     if (isRight) {
-      setText("Правильно!");
-      // delay(3000).then(()=> setText(""))
-      // console.log(typeof words);
-      // console.log(words.slice(1) + words.slice(0, 1));
-      setWords(words.slice(1).concat(words.slice(0, 1)));
-      t = wipeText();
+      setText(`Правильно! ${streak === 0 ? "": `(x${streak + 1})` }`);
+      next();
     } else {
-      setText(`Нет, правильно "${words[0].right}"`);
-      // delay(3000).then(()=> setText(""))
-      // console.log(typeof words);
-      setWords(words.slice(1, 5).concat(words.slice(0, 1)).concat(words.slice(5)));
-      t = wipeText();
+      setText(`Нет, правильно "${right}"`);
+      retry();
     }
-    setWord(formatWord(words.at(1) as Word));
   };
-
-  // setWord(queue.at(0))
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="flex flex-col items-center justify-between h-[100svh]">
-        <div className="flex items-center justify-center h-[70svh] w-screen">
-          <h1 className="scroll-m-20 w-screen text-4xl font-semibold tracking-tight text-center">
-            {word}
-          </h1>
+  <>
+    <div className="flex flex-col items-center justify-between h-[100svh] w-screen ">
+      <Header />
+      <div className="flex items-center justify-center h-96 screen-wide">
+        <h1 className="scroll-m-20 screen-wide text-4xl font-semibold tracking-tight text-center">
+          {current}
+        </h1>
+      </div>
+      <div className="h-30 flex flex-col items-center">
+        <div className="h-8 p-5 flex items-center justify-center screen-wide">
+          <p className="text-lg font-semibold text-muted-foreground text-center ">
+            {text}
+          </p>
         </div>
-        <div className="h-[30svh] flex flex-col items-center">
-          <div className="h-8 p-5 flex items-center justify-center w-[100vw]">
-            <p className="text-lg font-semibold text-muted-foreground text-center ">
-              {text}
-            </p>
-          </div>
-          <div className="flex flex-row items-end justify-center w-screen h-full gap-2">
-            <Button variant="outline" className="w-full h-[10svh] ml-2 mb-2"
-                    onClick={() => onClick(word === words[0].right)}>
-              <CheckIcon className="h-[5svh] w-[5svh]" />
-            </Button>
-            <Button variant="outline" className="w-full h-[10svh] mr-2 mb-2"
-                    onClick={() => onClick(word !== words[0].right)}>
-              <XIcon className="h-[5svh] w-[5svh]" />
-            </Button>
-          </div>
+        <div className="flex flex-row items-end justify-center screen-wide h-full gap-2">
+          <Button variant="outline" className="w-full h-10 ml-2 mb-2 mt-2"
+                  onClick={() => onClick(current === right)}>
+            <CheckIcon className="h-5 w-5" />
+          </Button>
+          <Button variant="outline" className="w-full h-10 mr-2 mb-2 mt-2"
+                  onClick={() => onClick(current !== right)}>
+            <CrossIcon className="h-5 w-5" />
+          </Button>
         </div>
       </div>
-    </ThemeProvider>
+    </div>
+    <div>
+      {}
+    </div>
+  </>
   );
 };
 
