@@ -3,13 +3,13 @@ import "@/styles/styles.css";
 import { Button } from "@/components/ui/button.tsx";
 import { useState } from "react";
 import { CheckIcon } from "@/components/icons/check-icon.tsx";
-import { Header } from "@/components/header/header.tsx";
+import { MainHeader } from "@/routes/main/main-header.tsx";
 import { CrossIcon } from "@/components/icons/cross-icon.tsx";
 import { useWords } from "@/providers";
 import { ExplanationText } from "@/components/explanation-text";
 import { Mistakes } from "@/components/mistakes/mistakes.tsx";
 
-export const App = () => {
+export const Main = () => {
   const [text, setText] = useState<string>("");
   const { streak, right, current, retry, next } = useWords();
   const onClick = (isRight: boolean) => {
@@ -24,7 +24,7 @@ export const App = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-between h-[100svh] w-screen ">
-        <Header />
+        <MainHeader />
         <div className="flex items-center justify-center h-96 screen-wide">
           <h1 className="scroll-m-20 screen-wide text-4xl font-semibold tracking-tight text-center">
             {current}

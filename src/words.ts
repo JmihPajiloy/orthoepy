@@ -1,570 +1,1152 @@
+import { Word } from "@/providers";
+
 export const wordList = [
   /* Nouns */
   {
     right: "аэропОрты",
-    wrong: ["аэропортЫ"]
+    wrong: ["аэропортЫ"],
+    type: "noun"
   },
   {
     right: "бАнты",
-    wrong: ["бантЫ"]
+    wrong: ["бантЫ"],
+    type: "noun"
   },
   {
     right: "бОроду",
-    wrong: ["бородУ"]
+    wrong: ["бородУ"],
+    type: "noun"
   },
   {
     right: "бухгАлтеров",
-    wrong: ["бухгалтерОв"]
+    wrong: ["бухгалтерОв"],
+    type: "noun"
   },
   {
     right: "вероисповЕдание",
-    wrong: ["вероисповедАние"]
+    wrong: ["вероисповедАние"],
+    type: "noun"
   },
   {
     right: "водопровОд",
-    wrong: ["водопрОвод"]
+    wrong: ["водопрОвод"],
+    type: "noun"
   },
   {
     right: "граждАнство",
-    wrong: ["грАжданство"]
+    wrong: ["грАжданство"],
+    type: "noun"
   },
   {
     right: "дефИс",
-    wrong: ["дЕфис"]
+    wrong: ["дЕфис"],
+    type: "noun"
   },
   {
     right: "дешевИзна",
-    wrong: ["дешевизнА"]
+    wrong: ["дешевизнА"],
+    type: "noun"
   },
   {
     right: "диспансЕр",
-    wrong: ["диспАнсер"]
+    wrong: ["диспАнсер"],
+    type: "noun"
   },
   {
     right: "договорЕнность",
-    wrong: ["договОренность"]
+    wrong: ["договОренность"],
+    type: "noun"
   },
   {
     right: "докумЕнт",
-    wrong: ["докУмент"]
+    wrong: ["докУмент"],
+    type: "noun"
   },
   {
     right: "досУг",
-    wrong: ["дОсуг"]
+    wrong: ["дОсуг"],
+    type: "noun"
   },
   {
     right: "еретИк",
-    wrong: ["ерЕтик"]
+    wrong: ["ерЕтик"],
+    type: "noun"
   },
   {
     right: "жалюзИ",
-    wrong: ["жАлюзи"]
+    wrong: ["жАлюзи"],
+    type: "noun"
   },
   {
     right: "знАчимость",
-    wrong: ["значимОсть"]
+    wrong: ["значимОсть"],
+    type: "noun"
   },
   {
     right: "Иксы",
-    wrong: ["иксЫ"]
+    wrong: ["иксЫ"],
+    type: "noun"
   },
   {
     right: "каталОг",
-    wrong: ["катАлог"]
+    wrong: ["катАлог"],
+    type: "noun"
   },
   {
     right: "квартАл",
-    wrong: ["квАртал"]
+    wrong: ["квАртал"],
+    type: "noun"
   },
   {
     right: "киломЕтр",
-    wrong: ["килОметр"]
+    wrong: ["килОметр"],
+    type: "noun"
   },
   {
     right: "кОнусов",
-    wrong: ["конусОв"]
+    wrong: ["конусОв"],
+    type: "noun"
   },
   {
     right: "корЫсть",
-    wrong: ["кОрысть"]
+    wrong: ["кОрысть"],
+    type: "noun"
   },
   {
     right: "крАны",
-    wrong: ["кранЫ"]
+    wrong: ["кранЫ"],
+    type: "noun"
   },
   {
     right: "кремЕнь",
-    wrong: ["крЕмень"]
+    wrong: ["крЕмень"],
+    type: "noun"
   },
   {
     right: "кремнЯ",
-    wrong: ["крЕмня"]
+    wrong: ["крЕмня"],
+    type: "noun"
   },
   {
     right: "лЕкторов",
-    wrong: ["лекторОв"]
+    wrong: ["лекторОв"],
+    type: "noun"
   },
   {
     right: "лОктя",
-    wrong: ["локтЯ"]
+    wrong: ["локтЯ"],
+    type: "noun"
   },
   {
     right: "локтЕй",
-    wrong: ["лОктей"]
+    wrong: ["лОктей"],
+    type: "noun"
   },
   {
     right: "лыжнЯ",
-    wrong: ["лЫжня"]
+    wrong: ["лЫжня"],
+    type: "noun"
   },
   {
     right: "мЕстностей",
-    wrong: ["местностЕй"]
+    wrong: ["местностЕй"],
+    type: "noun"
   },
   {
     right: "намЕрение",
-    wrong: ["намерЕние"]
+    wrong: ["намерЕние"],
+    type: "noun"
   },
   {
     right: "нарОст",
-    wrong: ["нАрост"]
+    wrong: ["нАрост"],
+    type: "noun"
   },
   {
     right: "нЕдруг",
-    wrong: ["недрУг"]
+    wrong: ["недрУг"],
+    type: "noun"
   },
   {
     right: "недУг",
-    wrong: ["нЕдуг"]
+    wrong: ["нЕдуг"],
+    type: "noun"
   },
   {
     right: "некролОг",
-    wrong: ["некрОлог"]
+    wrong: ["некрОлог"],
+    type: "noun"
   },
   {
     right: "нЕнависть",
-    wrong: []
+    wrong: [],
+    type: "noun"
   },
   {
     right: "нефтепровОд",
-    wrong: ["нефтепрОвод"]
+    wrong: ["нефтепрОвод"],
+    type: "noun"
   },
   {
     right: "новостЕй",
-    wrong: ["нОвостей"]
+    wrong: ["нОвостей"],
+    type: "noun"
   },
   {
     right: "нОгтя",
-    wrong: ["ногтЯ"]
+    wrong: ["ногтЯ"],
+    type: "noun"
   },
   {
     right: "ногтЕй",
-    wrong: ["нОгтей"]
+    wrong: ["нОгтей"],
+    type: "noun"
   },
   {
     right: "Отзыв (о книге)",
-    wrong: ["отзЫв (о книге)"]
+    wrong: ["отзЫв (о книге)"],
+    type: "noun"
   },
   {
     right: "отзЫв (посла из страны)",
-    wrong: ["Отзыв (посла из страны)"]
+    wrong: ["Отзыв (посла из страны)"],
+    type: "noun"
   },
   {
     right: "Отрочество",
-    wrong: ["отрОчество"]
+    wrong: ["отрОчество"],
+    type: "noun"
   },
   {
     right: "партЕр",
-    wrong: ["пАртер"]
+    wrong: ["пАртер"],
+    type: "noun"
   },
   {
     right: "портфЕль",
-    wrong: []
+    wrong: [],
+    type: "noun"
   },
   {
     right: "пОручни",
-    wrong: ["поручнИ"]
+    wrong: ["поручнИ"],
+    type: "noun"
   },
   {
     right: "придАное",
-    wrong: ["прИданое", "приданОе"]
+    wrong: ["прИданое", "приданОе"],
+    type: "noun"
   },
   {
     right: "призЫв",
-    wrong: ["прИзыв"]
+    wrong: ["прИзыв"],
+    type: "noun"
   },
   {
-    right: "свЁкла",
-    wrong: ["свеклА"]
+    right: "свЕкла",
+    wrong: ["свеклА"],
+    type: "noun"
   },
   {
     right: "сирОты",
-    wrong: ["сИроты"]
+    wrong: ["сИроты"],
+    type: "noun"
   },
   {
     right: "созЫв",
-    wrong: ["сОзыв"]
+    wrong: ["сОзыв"],
+    type: "noun"
   },
   {
     right: "сосредотОчение",
-    wrong: ["сосредоточЕние"]
+    wrong: ["сосредоточЕние"],
+    type: "noun"
   },
   {
     right: "срЕдства",
-    wrong: ["средствА"]
+    wrong: ["средствА"],
+    type: "noun"
   },
   {
     right: "стАтуя",
-    wrong: ["статУя"]
+    wrong: ["статУя"],
+    type: "noun"
   },
   {
     right: "столЯр",
-    wrong: ["стОляр"]
+    wrong: ["стОляр"],
+    type: "noun"
   },
   {
     right: "тамОжня",
-    wrong: []
+    wrong: [],
+    type: "noun"
   },
   {
     right: "тОрты",
-    wrong: ["тортЫ"]
+    wrong: ["тортЫ"],
+    type: "noun"
   },
   {
     right: "тУфля",
-    wrong: ["туфлЯ"]
+    wrong: ["туфлЯ"],
+    type: "noun"
   },
   {
     right: "цемЕнт",
-    wrong: ["цЕмент"]
+    wrong: [],
+    type: "noun"
   },
   {
     right: "цЕнтнер",
-    wrong: ["центнЕр"]
+    wrong: ["центнЕр"],
+    type: "noun"
   },
   {
     right: "цепОчка",
-    wrong: ["цЕпочка"]
+    wrong: ["цЕпочка"],
+    type: "noun"
   },
   {
     right: "шАрфы",
-    wrong: ["шарфЫ"]
+    wrong: ["шарфЫ"],
+    type: "noun"
   },
   {
     right: "шофЕр",
-    wrong: ["шОфер"]
+    wrong: ["шОфер"],
+    type: "noun"
   },
   {
     right: "экспЕрт",
-    wrong: ["Эксперт"]
+    wrong: ["Эксперт"],
+    type: "noun"
   },
   /* Adjectives */
   {
     right: "вернА",
-    wrong: ["вЕрна"]
+    wrong: ["вЕрна"],
+    type: "adjective"
   },
   {
     right: "знАчимый",
-    wrong: ["значИмый"]
+    wrong: ["значИмый"],
+    type: "adjective"
   },
   {
     right: "красИвее",
-    wrong: ["красивЕе"]
+    wrong: ["красивЕе"],
+    type: "adjective"
   },
   {
     right: "красИвейший",
-    wrong: ["красивЕйший"]
+    wrong: ["красивЕйший"],
+    type: "adjective"
   },
   {
     right: "кУхонный",
-    wrong: ["кухОнный"]
+    wrong: ["кухОнный"],
+    type: "adjective"
   },
   {
     right: "ловкА",
-    wrong: ["лОвка"]
+    wrong: ["лОвка"],
+    type: "adjective"
   },
   {
     right: "мозаИчный",
-    wrong: ["мозАичный"]
+    wrong: ["мозАичный"],
+    type: "adjective"
   },
   {
     right: "оптОвый",
-    wrong: ["Оптовый"]
+    wrong: ["Оптовый"],
+    type: "adjective"
   },
   {
     right: "прозорлИвый",
-    wrong: ["прозОрливый"]
+    wrong: ["прозОрливый"],
+    type: "adjective"
   },
   {
     right: "прозорлИва",
-    wrong: ["прозОрлива"]
+    wrong: ["прозОрлива"],
+    type: "adjective"
   },
   {
     right: "слИвовый",
-    wrong: ["сливОвый"]
+    wrong: ["сливОвый"],
+    type: "adjective"
   },
   /* Verbs */
   {
     right: "бралА",
-    wrong: ["брАла"]
+    wrong: ["брАла"],
+    type: "verb"
   },
   {
     right: "бралАсь",
-    wrong: ["брАлась"]
+    wrong: ["брАлась"],
+    type: "verb"
   },
   {
     right: "взялА",
-    wrong: ["взЯла"]
+    wrong: ["взЯла"],
+    type: "verb"
   },
   {
     right: "взялАсь",
-    wrong: ["взЯлась"]
+    wrong: ["взЯлась"],
+    type: "verb"
   },
   {
     right: "влилАсь",
-    wrong: ["влИлась"]
+    wrong: ["влИлась"],
+    type: "verb"
   },
   {
     right: "ворвалАсь",
-    wrong: ["ворвАлась"]
+    wrong: ["ворвАлась"],
+    type: "verb"
   },
   {
     right: "воспринЯть",
-    wrong: ["воспрИнять"]
+    wrong: ["воспрИнять"],
+    type: "verb"
   },
   {
     right: "воспринялА",
-    wrong: ["воспрИняла"]
+    wrong: ["воспрИняла"],
+    type: "verb"
   },
   {
     right: "воссоздалА",
-    wrong: ["воссоздАла"]
+    wrong: ["воссоздАла"],
+    type: "verb"
   },
   {
     right: "вручИт",
-    wrong: ["врУчит"]
+    wrong: ["врУчит"],
+    type: "verb"
   },
   {
     right: "гналА",
-    wrong: ["гнАла"]
+    wrong: ["гнАла"],
+    type: "verb"
   },
   {
     right: "гналАсь",
-    wrong: ["гнАлась"]
+    wrong: ["гнАлась"],
+    type: "verb"
   },
   {
     right: "добралА",
-    wrong: ["добрАла"]
+    wrong: ["добрАла"],
+    type: "verb"
   },
   {
     right: "добралАсь",
-    wrong: ["добрАлась"]
+    wrong: ["добрАлась"],
+    type: "verb"
   },
   {
     right: "дождалАсь",
-    wrong: ["дождАлась"]
+    wrong: ["дождАлась"],
+    type: "verb"
   },
   {
     right: "дозвонИтся",
-    wrong: ["дозвОнится"]
+    wrong: ["дозвОнится"],
+    type: "verb"
   },
   {
     right: "дозИровать",
-    wrong: ["дозировАть"]
+    wrong: ["дозировАть"],
+    type: "verb"
   },
   {
     right: "ждалА",
-    wrong: ["ждАла"]
+    wrong: ["ждАла"],
+    type: "verb"
   },
   {
     right: "жилОсь",
-    wrong: []
+    wrong: [],
+    type: "verb"
   },
   {
     right: "закУпорить",
-    wrong: ["закупОрить"]
+    wrong: ["закупОрить"],
+    type: "verb"
   },
   {
     right: "занЯть",
-    wrong: []
+    wrong: [],
+    type: "verb"
   },
   {
     right: "зАнял",
-    wrong: ["занЯл"]
+    wrong: ["занЯл"],
+    type: "verb"
   },
   {
     right: "занялА",
-    wrong: ["занЯла"]
+    wrong: ["занЯла"],
+    type: "verb"
   },
   {
     right: "зАняли",
-    wrong: ["занЯли"]
+    wrong: ["занЯли"],
+    type: "verb"
   },
   {
     right: "заперлА",
-    wrong: []
+    wrong: [],
+    type: "verb"
   },
   {
     right: "запломбировАть",
-    wrong: ["запломбИровать"]
+    wrong: ["запломбИровать"],
+    type: "verb"
   },
   {
     right: "защемИт",
-    wrong: ["защЕмит"]
+    wrong: ["защЕмит"],
+    type: "verb"
   },
   {
     right: "звалА",
-    wrong: ["звАла"]
+    wrong: ["звАла"],
+    type: "verb"
   },
   {
     right: "звонИт",
-    wrong: ["звОнит"]
+    wrong: ["звОнит"],
+    type: "verb"
   },
   {
     right: "кАшлянуть",
-    wrong: ["кашлянУть"]
+    wrong: ["кашлянУть"],
+    type: "verb"
   },
   {
     right: "клАла",
-    wrong: ["клалА"]
+    wrong: ["клалА"],
+    type: "verb"
   },
   {
     right: "клЕить",
-    wrong: []
+    wrong: [],
+    type: "verb"
   },
   {
     right: "крАлась",
-    wrong: ["кралАсь"]
+    wrong: ["кралАсь"],
+    type: "verb"
   },
   {
     right: "кровоточИть",
-    wrong: ["кровотОчить"]
+    wrong: ["кровотОчить"],
+    type: "verb"
   },
   {
     right: "лгалА",
-    wrong: ["лгАла"]
+    wrong: ["лгАла"],
+    type: "verb"
   },
   {
     right: "лилА",
-    wrong: ["лИла"]
+    wrong: ["лИла"],
+    type: "verb"
   },
   {
     right: "лилАсь",
-    wrong: ["лИлась"]
+    wrong: ["лИлась"],
+    type: "verb"
   },
   {
     right: "навралА",
-    wrong: ["наврАла"]
+    wrong: ["наврАла"],
+    type: "verb"
   },
   {
     right: "наделИт",
-    wrong: ["надЕлит"]
+    wrong: ["надЕлит"],
+    type: "verb"
   },
   {
     right: "надорвалАсь",
-    wrong: ["надорвАлась"]
+    wrong: ["надорвАлась"],
+    type: "verb"
   },
   {
     right: "надорвАться",
-    wrong: []
+    wrong: [],
+    type: "verb"
   },
   {
     right: "назвалАсь",
-    wrong: ["назвАлась"]
+    wrong: ["назвАлась"],
+    type: "verb"
   },
   {
     right: "накренИтся",
-    wrong: ["накрЕнится"]
+    wrong: ["накрЕнится"],
+    type: "verb"
   },
   {
     right: "налилА",
-    wrong: ["налИла"]
+    wrong: ["налИла"],
+    type: "verb"
   },
   {
     right: "нарвалА",
-    wrong: ["нарвАла"]
+    wrong: ["нарвАла"],
+    type: "verb"
   },
   {
     right: "начАть",
-    wrong: []
+    wrong: [],
+    type: "verb"
   },
   {
     right: "нАчал",
-    wrong: ["начАл"]
+    wrong: ["начАл"],
+    type: "verb"
   },
   {
     right: "началА",
-    wrong: ["начАла", "нАчала"]
+    wrong: ["начАла", "нАчала"],
+    type: "verb"
   },
   {
     right: "нАчали",
-    wrong: ["начАли", "начАли"]
+    wrong: ["начАли", "начАли"],
+    type: "verb"
   },
   {
     right: "обзвонИт",
-    wrong: ["обзвОнит"]
+    wrong: ["обзвОнит"],
+    type: "verb"
   },
   {
     right: "облегчИть",
-    wrong: ["облЕгчить"]
+    wrong: ["облЕгчить"],
+    type: "verb"
   },
   {
     right: "облегчИт",
-    wrong: ["облЕгчит"]
+    wrong: ["облЕгчит"],
+    type: "verb"
   },
   {
     right: "облилАсь",
-    wrong: ["облИлась"]
+    wrong: ["облИлась"],
+    type: "verb"
   },
   {
     right: "обнялАсь",
-    wrong: ["обнЯлась"]
+    wrong: ["обнЯлась"],
+    type: "verb"
   },
   {
     right: "обогналА",
-    wrong: ["обогнАла"]
+    wrong: ["обогнАла"],
+    type: "verb"
   },
   {
     right: "ободралА",
-    wrong: ["ободрАла"]
+    wrong: ["ободрАла"],
+    type: "verb"
   },
   {
     right: "ободрИть",
-    wrong: []
+    wrong: [],
+    type: "verb"
   },
   {
     right: "ободрИт",
-    wrong: []
+    wrong: [],
+    type: "verb"
   },
   {
     right: "ободрИться",
-    wrong: ["обОдриться"]
+    wrong: ["обОдриться"],
+    type: "verb"
   },
   {
     right: "ободрИтся",
-    wrong: ["обОдрится"]
+    wrong: ["обОдрится"],
+    type: "verb"
   },
   {
     right: "обострИть",
-    wrong: ["обОстрить"]
+    wrong: ["обОстрить"],
+    type: "verb"
   },
   {
     right: "одолжИть",
-    wrong: ["одОлжить"]
+    wrong: ["одОлжить"],
+    type: "verb"
   },
   {
     right: "одолжИт",
-    wrong: ["одОлжит"]
+    wrong: ["одОлжит"],
+    type: "verb"
   },
   {
     right: "озлОбить",
-    wrong: ["озлобИть"]
+    wrong: ["озлобИть"],
+    type: "verb"
   },
   {
     right: "оклЕить",
-    wrong: ["оклеИть"]
+    wrong: ["оклеИть"],
+    type: "verb"
   },
   {
     right: "окружИт",
-    wrong: ["окрУжит"]
+    wrong: ["окрУжит"],
+    type: "verb"
   },
-
-];
+  {
+    right: "опОшлить",
+    wrong: ["опошлИть"],
+    type: "verb"
+  },
+  {
+    right: "освЕдомиться",
+    wrong: ["осведомИться"],
+    type: "verb"
+  },
+  {
+    right: "освЕдомится",
+    wrong: ["осведомИтся"],
+    type: "verb"
+  },
+  {
+    right: "отбылА",
+    wrong: ["отбЫла"],
+    type: "verb"
+  },
+  {
+    right: "отдалА",
+    wrong: ["отдАла"],
+    type: "verb"
+  },
+  {
+    right: "откУпорить",
+    wrong: ["откупОрить"],
+    type: "verb"
+  },
+  {
+    right: "отозвалА",
+    wrong: ["отозвАла"],
+    type: "verb"
+  },
+  {
+    right: "отозвалАсь",
+    wrong: ["отозвАлась"],
+    type: "verb"
+  },
+  {
+    right: "перезвонИт",
+    wrong: ["перезвОнит"],
+    type: "verb"
+  },
+  {
+    right: "перелилА",
+    wrong: ["перелИла"],
+    type: "verb"
+  },
+  {
+    right: "плодоносИть",
+    wrong: ["плодонОсить"],
+    type: "verb"
+  },
+  {
+    right: "пломбировАть",
+    wrong: ["пломбИровать"],
+    type: "verb"
+  },
+  {
+    right: "повторИт",
+    wrong: ["повтОрит"],
+    type: "verb"
+  },
+  {
+    right: "позвалА",
+    wrong: ["позвАла"],
+    type: "verb"
+  },
+  {
+    right: "позвонИт",
+    wrong: ["позвОнит"],
+    type: "verb"
+  },
+  {
+    right: "полилА",
+    wrong: ["полИла"],
+    type: "verb"
+  },
+  {
+    right: "положИть",
+    wrong: [],
+    type: "verb"
+  },
+  {
+    right: "положИл",
+    wrong: [],
+    type: "verb"
+  },
+  {
+    right: "понЯть",
+    wrong: [],
+    type: "verb"
+  },
+  {
+    right: "понялА",
+    wrong: [],
+    type: "verb"
+  },
+  {
+    right: "послАла",
+    wrong: ["послалА"],
+    type: "verb"
+  },
+  {
+    right: "прибЫть",
+    wrong: [],
+    type: "verb"
+  },
+  {
+    right: "прИбыл",
+    wrong: ["прибЫл"],
+    type: "verb"
+  },
+  {
+    right: "прибылА",
+    wrong: ["прибЫла"],
+    type: "verb"
+  },
+  {
+    right: "прИбыли",
+    wrong: ["прибЫли"],
+    type: "verb"
+  },
+  {
+    right: "принЯть",
+    wrong: ["прИнять"],
+    type: "verb"
+  },
+  {
+    right: "прИнял",
+    wrong: ["принЯл"],
+    type: "verb"
+  },
+  {
+    right: "принялА",
+    wrong: ["принЯла", "прИняла"],
+    type: "verb"
+  },
+  {
+    right: "прИняли",
+    wrong: ["принЯли"],
+    type: "verb"
+  },
+  {
+    right: "рвалА",
+    wrong: ["рвАла"],
+    type: "verb"
+  },
+  {
+    right: "сверлИт",
+    wrong: ["свЕрлит"],
+    type: "verb"
+  },
+  {
+    right: "снялА",
+    wrong: ["снЯла"],
+    type: "verb"
+  },
+  {
+    right: "совралА",
+    wrong: ["соврАла"],
+    type: "verb"
+  },
+  {
+    right: "создалА",
+    wrong: ["создАла"],
+    type: "verb"
+  },
+  {
+    right: "сорвалА",
+    wrong: ["сорвАла"],
+    type: "verb"
+  },
+  {
+    right: "сорИт",
+    wrong: ["сОрит"],
+    type: "verb"
+  },
+  {
+    right: "убралА",
+    wrong: ["убрАла"],
+    type: "verb"
+  },
+  {
+    right: "углубИть",
+    wrong: ["углУбить"],
+    type: "verb"
+  },
+  {
+    right: "укрепИт",
+    wrong: ["укрЕпит"],
+    type: "verb"
+  },
+  {
+    right: "чЕрпать",
+    wrong: ["черпАть"],
+    type: "verb"
+  },
+  {
+    right: "щемИт",
+    wrong: ["щЕмит"],
+    type: "verb"
+  },
+  {
+    right: "щЕлкать",
+    wrong: ["щелкАть"],
+    type: "verb"
+  },
+  {
+    right: "довезЕнный",
+    wrong: [],
+    type: "adjective-participle"
+  },
+  {
+    right: "зАгнутый",
+    wrong: ["загнУтый"],
+    type: "adjective-participle"
+  },
+  {
+    right: "зАнятый",
+    wrong: ["занЯтый"],
+    type: "adjective-participle"
+  },
+  {
+    right: "занятА",
+    wrong: ["зАнята"],
+    type: "adjective-participle"
+  },
+  {
+    right: "зАпертый",
+    wrong: ["запЕртый"],
+    type: "adjective-participle"
+  },
+  {
+    right: "заселЕнный",
+    wrong: ["засЕленный"],
+    type: "adjective-participle"
+  },
+  {
+    right: "заселенА",
+    wrong: ["засЕлена"],
+    type: "adjective-participle"
+  },
+  {
+    right: "кормЯщий",
+    wrong: ["кОрмящий"],
+    type: "adjective-participle"
+  },
+  {
+    right: "кровоточАщий",
+    wrong: ["кровотОчащий"],
+    type: "adjective-participle"
+  },
+  {
+    right: "нажИвший",
+    wrong: ["нАживший"],
+    type: "adjective-participle"
+  },
+  {
+    right: "налИвший",
+    wrong: ["нАливший"],
+    type: "adjective-participle"
+  },
+  {
+    right: "нанЯвшийся",
+    wrong: ["нАнявшийся"],
+    type: "adjective-participle"
+  },
+  {
+    right: "начАвший",
+    wrong: ["нАчавший"],
+    type: "adjective-participle"
+  },
+  {
+    right: "нАчатый",
+    wrong: ["начАтый"],
+    type: "adjective-participle"
+  },
+  {
+    right: "низведЕнный",
+    wrong: ["низвЕденный"],
+    type: "adjective-participle"
+  },
+  {
+    right: "облегчЕнный",
+    wrong: ["облЕгченный"],
+    type: "adjective-participle"
+  },
+  {
+    right: "ободрЕнный",
+    wrong: ["обОдренный"],
+    type: "adjective-participle"
+  },
+  {
+    right: "обострЕнный",
+    wrong: ["обОстренный"],
+    type: "adjective-participle"
+  },
+  {
+    right: "отключЕнный",
+    wrong: ["отклЮченный"],
+    type: "adjective-participle"
+  },
+  {
+    right: "повторЕнный",
+    wrong: ["повтОренный"],
+    type: "adjective-participle"
+  },
+  {
+    right: "поделЕнный",
+    wrong: ["подЕленный"],
+    type: "adjective-participle"
+  },
+  {
+    right: "понЯвший",
+    wrong: ["пОнявший"],
+    type: "adjective-participle"
+  },
+  {
+    right: "прИнятый",
+    wrong: ["принЯтый"],
+    type: "adjective-participle"
+  },
+  {
+    right: "принятА",
+    wrong: ["прИнята"],
+    type: "adjective-participle"
+  },
+  {
+    right: "приручЕнный",
+    wrong: ["прирУченный"],
+    type: "adjective-participle"
+  },
+  {
+    right: "прожИвший",
+    wrong: ["прожИвший"],
+    type: "adjective-participle"
+  },
+  {
+    right: "снятА",
+    wrong: ["снЯта"],
+    type: "adjective-participle"
+  },
+  {
+    right: "сОгнутый",
+    wrong: ["согнУтый"],
+    type: "adjective-participle"
+  },
+  {
+    right: "углублЕнный",
+    wrong: ["углУбленный"],
+    type: "adjective-participle"
+  },
+  {
+    right: "закУпорив",
+    wrong: ["закупОрив"],
+    type: "verb-participle"
+  },
+  {
+    right: "начАв",
+    wrong: ["нАчав"],
+    type: "verb-participle"
+  },
+  {
+    right: "начАвшись",
+    wrong: ["нАчавшись"],
+    type: "verb-participle"
+  },
+  {
+    right: "отдАв",
+    wrong: [],
+    type: "verb-participle"
+  },
+  {
+    right: "поднЯв",
+    wrong: [],
+    type: "verb-participle"
+  },
+  {
+    right: "понЯв",
+    wrong: ["пОняв"],
+    type: "verb-participle"
+  },
+  {
+    right: "прибЫв",
+    wrong: ["прИбыв"],
+    type: "verb-participle"
+  },
+  {
+    right: "создАв",
+    wrong: ["сОздав"],
+    type: "verb-participle"
+  },
+  {
+    right: "вОвремя",
+    wrong: ["воврЕмя"],
+    type: "adverb"
+  },
+  {
+    right: "дОверху",
+    wrong: ["довЕрху"],
+    type: "adverb"
+  },
+  {
+    right: "донЕльзя",
+    wrong: ["дОнельзя", "донельзЯ"],
+    type: "adverb"
+  },
+  {
+    right: "дОнизу",
+    wrong: ["донИзу"],
+    type: "adverb"
+  },
+  {
+    right: "дОсуха",
+    wrong: ["досУха", "досухА"],
+    type: "adverb"
+  },
+  {
+    right: "зАсветло",
+    wrong: ["засветлО"],
+    type: "adverb"
+  },
+  {
+    right: "зАтемно",
+    wrong: ["затемнО"],
+    type: "adverb"
+  },
+  {
+    right: "надОлго",
+    wrong: ["нАдолго"],
+    type: "adverb"
+  },
+  {
+    right: "ненадОлго",
+    wrong: ["ненАдолго"],
+    type: "adverb"
+  }
+] satisfies Array<Omit<Word, "enabled">>;

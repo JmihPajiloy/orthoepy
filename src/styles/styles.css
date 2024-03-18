@@ -12,8 +12,3 @@
         color: hsl(var(--accent-foreground));
     }
 }
-
-/*.mobile:hover, .mobile:active {*/
-/*    background-color: hsl(var(--accent));*/
-/*    color: hsl(var(--accent-foreground));*/
-/*}*/

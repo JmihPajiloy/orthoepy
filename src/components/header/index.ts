@@ -1,1 +1,1 @@
-export * from "@/components/header/header.tsx"
+export * from "@/routes/main/main-header.tsx"

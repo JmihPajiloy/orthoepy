@@ -1,7 +1,18 @@
 import { useWords } from "@/providers";
+import { Badge } from "@/components/ui/badge.tsx";
 
 export const Mistakes = () => {
   const { wrongs } = useWords();
+  const partsOfSpeech = new Map(
+    [
+      ["noun", "сущ."],
+      ["adjective", "прил."],
+      ["verb", "глаг."],
+      ["adjective-participle", "прич."],
+      ["verb-participle", "дееприч."],
+      ["adverb", "нар."]
+    ]
+  );
   return (
     <div className="flex flex-row justify-center ">
       <div className="flex flex-col screen-wide p-4">
@@ -15,7 +26,7 @@ export const Mistakes = () => {
                 Array
                   .from(wrongs.values())
                   .map(v => (<li className="font-medium">
-                    {v.right}
+                    {v.right}<Badge variant="outline" className="ml-2 px-1.5 pb-1">{partsOfSpeech.get(v.type)}</Badge>
                   </li>))
               }
             </ul> :

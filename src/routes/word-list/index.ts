@@ -1,0 +1,1 @@
+export * from "@/routes/word-list/word-list.tsx"

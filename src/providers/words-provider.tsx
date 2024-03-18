@@ -1,13 +1,15 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from "react";
 import { wordList } from "@/words.ts";
 import { shuffle } from "@/utils.ts";
 
-type Word = {
+export type Word = {
   right: string,
-  wrong: string[]
+  wrong: string[],
+  enabled: boolean,
+  type: "noun" | "adjective" | "verb" | "adjective-participle" | "verb-participle" | "adverb"
 }
 type WordsProviderProps = {
-  children: React.ReactNode,
+  children: ReactNode,
   retryGap: number,
 }
 
@@ -17,6 +19,7 @@ type WordsProviderState = {
   right: string
   wrongs: Set<Word>
   streak: number
+  setQueue: Dispatch<SetStateAction<Word[]>>
   next: () => void
   retry: () => void
 }
@@ -30,11 +33,12 @@ export const formatWord = (word: Word) => {
 };
 
 const initialState: WordsProviderState = {
-  queue: wordList,
+  queue: wordList.map((x) => ({...x, enabled: true})),
   current: "",
   right: "",
   wrongs: new Set(),
   streak: 0,
+  setQueue: (): void => {},
   next: () => null,
   retry: () => null
 };
@@ -46,7 +50,7 @@ export const WordsProvider = ({
                                 retryGap = 5,
                                 ...props
                               }: WordsProviderProps) => {
-  const [queue, setQueue] = useState<Array<Word>>(shuffle(wordList));
+  const [queue, setQueue] = useState<Array<Word>>(shuffle(wordList.map((x) => ({...x, enabled: true}))));
   const [wrongWords, setWrongWords] = useState<Set<Word>>(new Set<Word>());
   const [streak, setStreak] = useState<number>(0);
 
@@ -56,6 +60,7 @@ export const WordsProvider = ({
     right: queue[0].right,
     wrongs: wrongWords,
     streak: streak,
+    setQueue: setQueue,
     retry: () => {
       setStreak(0);
       setQueue(queue.slice(1, retryGap).concat(queue.slice(0, 1)).concat(queue.slice(retryGap)));
