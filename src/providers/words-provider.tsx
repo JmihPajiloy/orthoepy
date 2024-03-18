@@ -1,6 +1,15 @@
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from "react";
 import { wordList } from "@/words.ts";
-import { shuffle } from "@/utils.ts";
+
+
+const shuffle = <T,>(arr: Array<T>): Array<T> => {
+  let m = arr.length;
+  while (m) {
+    const i = Math.floor(Math.random() * m--);
+    [arr[m], arr[i]] = [arr[i], arr[m]];
+  }
+  return arr as T[];
+};
 
 export type Word = {
   right: string,
@@ -24,7 +33,7 @@ type WordsProviderState = {
   retry: () => void
 }
 
-export const formatWord = (word: Word) => {
+const formatWord = (word: Word) => {
   const words = [...word.wrong];
   words.push(word.right);
   return words.at(

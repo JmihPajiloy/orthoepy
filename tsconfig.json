@@ -27,6 +27,9 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@shadcn/ui": [
+        "./src/components/ui/"
       ]
     }
   },

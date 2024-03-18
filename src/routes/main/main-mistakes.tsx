@@ -1,7 +1,7 @@
 import { useWords } from "@/providers";
-import { Badge } from "@/components/ui/badge.tsx";
+import { Badge } from "@shadcn/ui";
 
-export const Mistakes = () => {
+export const MainMistakes = () => {
   const { wrongs } = useWords();
   const partsOfSpeech = new Map(
     [

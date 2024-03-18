@@ -2,7 +2,7 @@ type Props = {
   text: string,
 }
 
-export const ExplanationText = ({ text }: Props) => {
+export const MainExplanationText = ({ text }: Props) => {
   return (
     <>
       <div className="h-8 p-5 flex items-center justify-center screen-wide">

@@ -1,4 +1,4 @@
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert.tsx";
+import { Alert, AlertDescription, AlertTitle } from "@shadcn/ui";
 import { Link } from "react-router-dom";
 
 export const WordListAlert = () => {

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button.tsx";
+import { Button } from "@shadcn/ui";
 import { Link } from "react-router-dom";
 import { GithubButton } from "@/components/github-button.tsx";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";

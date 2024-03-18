@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Button } from "@/components/ui/button.tsx";
+import { Button } from "@shadcn/ui";
 
 export const GithubButton = () => {
   return (

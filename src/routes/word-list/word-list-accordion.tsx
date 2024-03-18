@@ -1,6 +1,4 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion.tsx";
-import { Checkbox } from "@/components/ui/checkbox.tsx";
-import { Label } from "@/components/ui/label.tsx";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, Checkbox, Label } from "@shadcn/ui";
 import { useWords, Word } from "@/providers";
 
 const byRight = (a: Word, b: Word) => {
@@ -35,7 +33,8 @@ export const WordListAccordion = () => {
                     .filter(word => word.type === pos)
                     .sort(byRight)
                     .map(
-                      (word, index, array) => <li className="flex items-center space-x-2 mt-2">
+                      (word: Word, index: number, array: Array<Word>) => <li
+                        className="flex items-center space-x-2 mt-2">
                         <Checkbox
                           id={index.toString()}
                           defaultChecked={word.enabled}

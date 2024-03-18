@@ -1,5 +1,4 @@
-import { Separator } from "@/components/ui/separator.tsx";
-import { Button } from "@/components/ui/button.tsx";
+import { Button, Separator } from "@shadcn/ui";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { useNavigate } from "react-router-dom";
 

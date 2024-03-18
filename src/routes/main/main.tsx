@@ -1,13 +1,13 @@
 import "@/global.css";
 import "@/styles/styles.css";
-import { Button } from "@/components/ui/button.tsx";
+import { Button } from "@shadcn/ui";
 import { useState } from "react";
 import { CheckIcon } from "@/components/icons/check-icon.tsx";
 import { MainHeader } from "@/routes/main/main-header.tsx";
 import { CrossIcon } from "@/components/icons/cross-icon.tsx";
 import { useWords } from "@/providers";
-import { ExplanationText } from "@/components/explanation-text";
-import { Mistakes } from "@/components/mistakes/mistakes.tsx";
+import { MainMistakes } from "@/routes/main/main-mistakes.tsx";
+import { MainExplanationText } from "@/routes/main/main-explanation-text.tsx";
 
 export const Main = () => {
   const [text, setText] = useState<string>("");
@@ -31,7 +31,7 @@ export const Main = () => {
           </h1>
         </div>
         <div className="h-30 flex flex-col items-center">
-          <ExplanationText text={text} />
+          <MainExplanationText text={text} />
           <div className="flex flex-row items-end justify-center screen-wide h-full gap-2">
             <Button variant="outline" className="w-full h-10 ml-2 mb-2 mt-2 mobile"
                     onClick={() => onClick(current === right)}>
@@ -44,7 +44,7 @@ export const Main = () => {
           </div>
         </div>
       </div>
-      <Mistakes />
+      <MainMistakes />
     </>
   );
 };

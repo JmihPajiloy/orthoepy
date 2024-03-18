@@ -1,0 +1,1 @@
+export * from "@/routes/not-found/not-found.tsx"
