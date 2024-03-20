@@ -1,18 +1,25 @@
-import { WordListAlert } from "@/routes/word-list/word-list-alert.tsx";
-import { WordListHeader } from "@/routes/word-list/word-list-header.tsx";
-import { WordListAccordion } from "@/routes/word-list/word-list-accordion.tsx";
+import { WordListAccordion, WordListAlert } from "@/routes/word-list";
+import { BackToHome, Header, Heading, ThemeButton } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export const WordList = () => {
 
   return (
-    <div className="flex flex-row justify-center ">
-      <div className="screen-wide flex flex-col justify-center">
-        <WordListHeader/>
-        <div className="flex flex-col px-2">
-          <WordListAlert/>
-          <WordListAccordion/>
+    <div className="h-screen flex flex-col justify-between">
+      <div className="flex flex-row justify-center ">
+        <div className="screen-wide flex flex-col justify-center">
+          <Header>
+            <BackToHome />
+            <Heading>Список ударений ЕГЭ</Heading>
+            <ThemeButton />
+          </Header>
+          <div className="flex flex-col px-2">
+            <WordListAlert />
+            <WordListAccordion />
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

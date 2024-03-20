@@ -40,7 +40,7 @@ export const WordListAccordion = () => {
                           defaultChecked={word.enabled}
                           onCheckedChange={
                             checked => {
-                              array[index].enabled = (typeof checked == "boolean") ? checked : false;
+                              array[index].enabled = (typeof checked === "boolean") ? checked : false;
                               setQueue(
                                 queue
                                   .filter(x => x.type !== pos)
