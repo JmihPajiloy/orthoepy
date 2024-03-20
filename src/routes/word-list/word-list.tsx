@@ -5,12 +5,12 @@ import { Footer } from "@/components/footer";
 export const WordList = () => {
 
   return (
-    <div className="h-screen flex flex-col justify-between">
+    <div className="h-[100svh] flex flex-col justify-between">
       <div className="flex flex-row justify-center ">
         <div className="screen-wide flex flex-col justify-center">
           <Header>
             <BackToHome />
-            <Heading>Список ударений ЕГЭ</Heading>
+            <Heading>Список ударений</Heading>
             <ThemeButton />
           </Header>
           <div className="flex flex-col px-2">
