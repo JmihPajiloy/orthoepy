@@ -1,0 +1,5 @@
+export * from "@/components/header/back-to-home.tsx"
+export * from "@/components/header/header.tsx"
+export * from "@/components/header/heading.tsx"
+export * from "@/components/header/theme-button.tsx"
+export * from "@/components/header/to-word-list.tsx"
