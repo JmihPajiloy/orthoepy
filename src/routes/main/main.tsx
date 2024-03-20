@@ -20,11 +20,11 @@ export const Main = () => {
     <>
       <div className="flex flex-col items-center justify-between h-[100svh] w-screen ">
         <Header>
-          <ThemeButton />
-          <Heading>
-            Ударения ЕГЭ
-          </Heading>
           <ToWordList />
+          <Heading>
+            Ударения
+          </Heading>
+          <ThemeButton />
         </Header>
         <MainCurrentWord />
         <div className="h-30 flex flex-col items-center">
