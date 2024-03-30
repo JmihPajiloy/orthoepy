@@ -29,7 +29,7 @@ export const Main = () => {
         <MainCurrentWord />
         <div className="h-30 flex flex-col items-center">
           <MainExplanationText text={text} />
-          <div className="flex flex-row items-end justify-center screen-wide h-full gap-2">
+          <div className="flex flex-row items-end justify-center screen-wide h-full gap-2 p-2">
             <MainCorrectButton onClick={() => onClick(current === right)} />
             <MainWrongButton onClick={() => onClick(current !== right)} />
           </div>

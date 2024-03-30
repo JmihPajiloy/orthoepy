@@ -1,17 +1,17 @@
-import React from "react";
-import { CheckIcon } from "@/components/icons";
+import type { MouseEventHandler } from "react";
 import { Button } from "@shadcn/ui";
+import { CheckIcon } from "@radix-ui/react-icons";
 
 type Props = {
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
+  onClick?: MouseEventHandler<HTMLButtonElement>
 }
 
 export const MainCorrectButton = ({ onClick }: Props) => {
   return (
     <Button variant="outline"
-            className="w-full h-10 ml-2 mb-2 mt-2 mobile"
+            className="w-full h-10 mobile"
             onClick={onClick}>
-      <CheckIcon className="h-5 w-5" />
+      <CheckIcon className="h-6 w-6 mr-1" />Верно
     </Button>
   );
 };
