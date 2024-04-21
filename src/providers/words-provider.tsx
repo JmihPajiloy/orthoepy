@@ -1,5 +1,5 @@
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from "react";
-import { wordList } from "@/words.ts";
+import { wordList } from "@/task-4-words.ts";
 
 
 const shuffle = <T,>(arr: Array<T>): Array<T> => {

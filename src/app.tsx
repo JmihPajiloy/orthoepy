@@ -12,7 +12,7 @@ export const App = () => {
           <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
             <Routes>
               <Route path="/" element={<Main />} />
-              <Route path="/word-list" element={<WordList />} />
+              <Route path="/wordlist" element={<WordList />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </ThemeProvider>

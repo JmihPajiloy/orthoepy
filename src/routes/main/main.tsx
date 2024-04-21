@@ -20,7 +20,9 @@ export const Main = () => {
     <>
       <div className="flex flex-col items-center justify-between h-[100svh] w-screen ">
         <Header>
-          <ToWordList />
+          <div className="flex">
+            <ToWordList />
+          </div>
           <Heading>
             Ударения
           </Heading>

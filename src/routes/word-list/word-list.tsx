@@ -1,5 +1,5 @@
 import { WordListAccordion, WordListAlert } from "@/routes/word-list";
-import { BackToHome, Header, Heading, ThemeButton } from "@/components/header";
+import { Back, Header, Heading, ThemeButton } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 export const WordList = () => {
@@ -9,7 +9,7 @@ export const WordList = () => {
       <div className="flex flex-row justify-center ">
         <div className="screen-wide flex flex-col justify-center">
           <Header>
-            <BackToHome />
+            <Back to="/" />
             <Heading>Список ударений</Heading>
             <ThemeButton />
           </Header>

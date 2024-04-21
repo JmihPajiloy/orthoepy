@@ -33,6 +33,11 @@ export const wordList = [
     type: "noun"
   },
   {
+    right: "газопровОд",
+    wrong: ["газопрОвод"],
+    type: "noun"
+  },
+  {
     right: "граждАнство",
     wrong: ["грАжданство"],
     type: "noun"

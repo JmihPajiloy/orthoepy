@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const WordListAlert = () => {
   return (
-    <Alert className="">
+    <Alert>
       <AlertTitle>
         Что это?
       </AlertTitle>
