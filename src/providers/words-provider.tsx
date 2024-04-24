@@ -1,15 +1,9 @@
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from "react";
 import { wordList } from "@/task-4-words.ts";
+import { shuffle } from "@/utils";
 
 
-const shuffle = <T,>(arr: Array<T>): Array<T> => {
-  let m = arr.length;
-  while (m) {
-    const i = Math.floor(Math.random() * m--);
-    [arr[m], arr[i]] = [arr[i], arr[m]];
-  }
-  return arr as T[];
-};
+
 
 export type Word = {
   right: string,

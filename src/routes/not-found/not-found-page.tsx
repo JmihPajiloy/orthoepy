@@ -3,7 +3,7 @@ import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { Link } from "react-router-dom";
 
 
-export const NotFound = () => {
+export const NotFoundPage = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <div className="flex justify-center items-center h-10 screen-wide">

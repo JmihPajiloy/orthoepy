@@ -10,9 +10,7 @@ export const WordListAlert = () => {
       <AlertDescription>
         Все ударения взяты из <Link
         to="https://fipi.ru/ege/demoversii-specifikacii-kodifikatory"
-        className="text-muted-foreground underline-offset-4 underline">сборника фипи</Link>
-        , ничего не убрано, ничего не добавлено.
-        Галочкой отмечены те слова, которые будут попадаться
+        className="text-muted-foreground underline-offset-4 underline">сборника фипи</Link>. Ничего не убрано, и ничего не добавлено
       </AlertDescription>
     </Alert>
   );

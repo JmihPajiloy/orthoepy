@@ -1,8 +1,8 @@
-import { WordListAccordion, WordListAlert } from "@/routes/word-list";
+import { WordListList, WordListAlert } from "@/routes/word-list";
 import { Back, Header, Heading, ThemeButton } from "@/components/header";
 import { Footer } from "@/components/footer";
 
-export const WordList = () => {
+export const WordListPage = () => {
 
   return (
     <div className="h-[100svh] flex flex-col justify-between">
@@ -15,7 +15,7 @@ export const WordList = () => {
           </Header>
           <div className="flex flex-col px-2">
             <WordListAlert />
-            <WordListAccordion />
+            <WordListList />
           </div>
         </div>
       </div>

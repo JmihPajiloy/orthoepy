@@ -1,8 +1,8 @@
 import { ThemeProvider, WordsProvider } from "@/providers";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { Main } from "@/routes/main";
-import { WordList } from "@/routes/word-list";
-import { NotFound } from "@/routes/not-found";
+import { WordListPage } from "@/routes/word-list";
+import { NotFoundPage } from "@/routes/not-found";
 
 export const App = () => {
   return (
@@ -12,8 +12,8 @@ export const App = () => {
           <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
             <Routes>
               <Route path="/" element={<Main />} />
-              <Route path="/wordlist" element={<WordList />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="/wordlist" element={<WordListPage />} />
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </ThemeProvider>
         </WordsProvider>

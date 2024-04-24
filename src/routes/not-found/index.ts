@@ -1,1 +1,1 @@
-export * from "@/routes/not-found/not-found.tsx"
+export * from "@/routes/not-found/not-found-page.tsx"
