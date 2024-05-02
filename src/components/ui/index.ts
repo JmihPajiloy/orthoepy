@@ -1,4 +1,3 @@
-export * from "@/components/ui/accordion.tsx"
 export * from "@/components/ui/alert.tsx"
 export * from "@/components/ui/badge.tsx"
 export * from "@/components/ui/button.tsx"
