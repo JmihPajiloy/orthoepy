@@ -9,10 +9,10 @@ export const Footer = () => {
       <Separator orientation="horizontal" />
       <div className="flex justify-center pb-5 px-3">
         <div className="screen-wide flex justify-between">
-          <Button variant="link" className="text-muted-foreground pl-0">
-            <Link to="https://github.com/JmihPajiloy/orthoepy">
-              <GitHubLogoIcon className="h-5 w-5 mr-2 " />
-            </Link>Github
+          <Button variant="link" className="text-muted-foreground pl-0" asChild>
+              <Link to="https://github.com/JmihPajiloy/orthoepy">
+                <GitHubLogoIcon className="h-5 w-5 mr-2 " />Github
+              </Link>
           </Button>
           <p className="text-sm font-medium text-muted-foreground h-full content-center">made by Jmih Pajiloy</p>
         </div>
